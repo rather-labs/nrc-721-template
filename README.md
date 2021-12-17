@@ -1,4 +1,8 @@
-# nrc-721-template
+# <img src="logo.svg" alt="Rather Labs" height="40px">
+
+**nrc-721-template | Template for custom NFT implementation for the Nervos Network.**
+
+# Implementation procedure
 
 Add custom behavior:
 
@@ -23,3 +27,7 @@ Build release contracts:
 ```sh
 capsule build --release
 ```
+
+## License
+
+Rather Labs NRC-721 is released under the [MIT License](LICENSE).
