@@ -7,10 +7,10 @@ use ckb_std::{
     high_level::load_script,
 };
 use core::result::Result;
-use nft_base::*;
-use nft_base::error::*;
-use nft_base::helper::*;
-use nft_base::extensions::OnlyOwner;
+use nrc_721::*;
+use nrc_721::error::*;
+use nrc_721::helper::*;
+use nrc_721::extensions::OnlyOwner;
 
 ///////////////////////////////////////////////////////////////////////////////
 // Custom behavior
@@ -42,7 +42,7 @@ define_script! { ComposedScript(Base, OnlyOwner, Custom) { } }
 pub fn main() -> Result<(), Error> {
     let nft_type = load_script()?;
     ComposedScript::validate_nft_args(&nft_type)?;
-    match nft_base::parse_nft_action(&nft_type)? {
+    match nrc_721::parse_nft_action(&nft_type)? {
         Action::Create => ComposedScript::handle_creation(&nft_type),
         Action::Update => ComposedScript::handle_update(&nft_type),
         Action::Destroy => ComposedScript::handle_destroying(&nft_type),
