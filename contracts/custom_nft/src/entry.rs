@@ -10,7 +10,6 @@ use core::result::Result;
 use nrc_721::*;
 use nrc_721::error::*;
 use nrc_721::helper::*;
-use nrc_721::extensions::OnlyOwner;
 
 ///////////////////////////////////////////////////////////////////////////////
 // Custom behavior
@@ -34,6 +33,8 @@ impl Custom {
 }
 
 // Composite script
+
+use nrc_721::extensions::OnlyOwner;
 
 define_script! { ComposedScript(Base, OnlyOwner, Custom) { } }
 

@@ -8,4 +8,8 @@ edition = "2018"
 [dependencies]
 ckb-std = "0.9.0"
 blake2b-rs = "0.2.0"
-nrc_721 = { git = "https://github.com/rather-labs/nrc-721.git", branch = "master" }
+nrc_721 = { git = "https://github.com/rather-labs/nrc-721.git", branch = "master", features = ["only_owner"] }
+
+[features]
+default = ["only_owner"]
+only_owner = []
