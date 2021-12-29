@@ -2,6 +2,15 @@
 
 **nrc-721-template | Template for custom NFT implementation for the Nervos Network.**
 
+[![Gitpod
+Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/rather-labs/nrc-721-template)
+
+# Requirements
+
+```sh
+cargo install ckb-capsule
+```
+
 # Implementation procedure
 
 Add custom behavior:
